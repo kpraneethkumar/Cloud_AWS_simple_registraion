@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+input[type=text], input[type=password] {
+  width: 30%;
+  padding: 12px 20px;
+  margin: 8px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  color:DodgerBlue;
+}
+
+button {
+  background-color:#4169E1;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 20%;
+}
+
+
+
+html,body{
+background-image:url('https://as2.ftcdn.net/v2/jpg/01/19/11/55/1000_F_119115529_mEnw3lGpLdlDkfLgRcVSbFRuVl6sMDty.jpg');
+height:100%;
+color:#000000;
+background-repeat:no-repeat;
+background-attachment: fixed;
+background-size: cover;
+}
+
+</style>
+</head>
+    <body>
+        <div align="center">
+            <div><h1 style="color:white;">Login Page</h1></div>
+        <div>
+            <form action="{{url_for('login')}}" method="POST">
+                <div>{{ message }}</div>
+                <br><br>
+                <label style="color:white;">User Name : </label><input id="username" name="username" type="text" placeholder="User Name" autocomplete="off"/>
+                <br><br>
+                <label style="color:white;">Password : </label>
+                <input id="password" name="password" type="password" placeholder="Password" autocomplete="off"/>
+                <br><br>
+                <button id="submit" name="submit">Sign in</button>
+            </form>
+        </div>
+        <p style="color:white;">Don't have an account? Please click <a href="{{url_for('registration')}}">here</a></p>
+    </div>
+</body>
+</html>
